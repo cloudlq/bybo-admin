@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>预览</title>
+		<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+		<script type="text/javascript" src="app/js/common/fun.js"></script>
+		<script type="text/javascript" src="app/js/articleDetail.js"></script>
+		<style>
+			.w10 {
+				width: 1000px;
+				margin: 20px auto;
+			}
+			
+			.article-title {
+				font-size: 22px;
+				color: #004d9a;
+				text-align: center;
+			}
+			
+			.article-txt {
+				overflow: hidden;
+				margin-top: 10px;
+				text-align: center;
+				font-size: 14px;
+				color: #666666;
+			}
+			
+			.article-box {
+				width: 1000px;
+				min-height: 200px;
+				padding-bottom: 50px;
+				padding-top: 20px;
+			}
+			
+			.fu-text-content {}
+			
+			.fu-text-content p {
+				margin: 10px 0;
+				font-size: 16px !important;
+				color: #666 !important;
+				font-family: "微软雅黑" !important;
+				line-height: 30px;
+			}
+			
+			.fu-text-content span {
+				font-size: 16px !important;
+				color: #666 !important;
+				font-family: "微软雅黑" !important;
+				line-height: 30px;
+			}
+			
+			.fu-text-content div {
+				font-size: 16px !important;
+				color: #666 !important;
+				font-family: "微软雅黑" !important;
+				line-height: 30px;
+			}
+			
+			.fu-text-content label {
+				font-size: 16px !important;
+				color: #666 !important;
+				font-family: "微软雅黑" !important;
+				line-height: 30px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="w10">
+			<!--右边介绍-->
+			<div class="right-detail">
+				<div class="article-title" id="title">
+				</div>
+				<div class="article-txt">
+					<p>作者：<span id="author"></span> &nbsp;&nbsp;&nbsp;&nbsp;时间：<span id="addTime"></span></p>
+				</div>
+				<!--具体文章-->
+				<div class="article-box fu-text-content" id="content">
+
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>

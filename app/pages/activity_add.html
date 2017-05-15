@@ -1,0 +1,105 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>新增活动</h1>
+</section>
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-6">
+            <!-- general form elements disabled -->
+            <div class="box box-warning">
+                <div class="box-header with-border">
+                    <h3 class="box-title">基本信息</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <form role="form">
+                        <!-- textarea -->
+                        <div class="form-group">
+                            <label>活动简介</label>
+                            <textarea id="activityDesc" class="form-control" rows="3" placeholder="请输入"></textarea>
+                        </div>
+                        <!-- input num -->
+                        <div class="form-group">
+                            <label>活动金额</label>
+                            <div class="input-group ">
+                                <input type="text" id="amount" class="form-control">
+                                <span class="input-group-addon">.00</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>阈值金额</label>
+                            <div class="input-group">
+                                <input type="text" id="thresholdAmount" class="form-control">
+                                <span class="input-group-addon">.00</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>活动类型</label>
+                            <div>
+                                <label class="radio-inline">
+                                    <input type="radio" name="type" value="1" checked> 满送
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="type" value="2"> 满减
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group pull-left">
+                            <label>每个用户可参与次数（<i>默认为不限制</i>）</label>
+                            <div class="input-group">
+                                <input type="number" id="monthLimit" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group pull-right">
+                            <label>活动归属渠道(<i>会替换渠道现有活动</i>)</label>
+                            <div>
+                                <select class="form-control" id="channel">
+                                    <option value="">全部</option>
+                                    <option value="WX">微信</option>
+                                    <option value="CCB">建行APP</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- radio -->
+                    </form>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+        <div class="col-md-6">
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">活动细则</h3>
+                </div>
+                <div class="box-body">
+                    <!-- Date and time range -->
+                    <div class="form-group">
+                        <label>活动有效期:</label>
+                        <div class="input-group">
+                            <button type="button" class="btn btn-default pull-right" id="daterange-btn">
+                                <span>
+                                    <i class="fa fa-calendar"></i>选择有效期
+                                </span>
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-group activity-rule">
+                        <label>赠送规则:</label>
+                    </div>
+                    <!-- /.form group -->
+                </div>
+                <!-- /.box-body -->
+                <div class="box-footer">
+                    <button id="submit" class="btn btn-primary">保 存</button>
+                </div>
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+    <!-- /.row -->
+</section>
+<!-- /.content -->

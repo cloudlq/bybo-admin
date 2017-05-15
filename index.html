@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>拜博口腔后台管理系统</title>
+		<!-- Tell the browser to be responsive to screen width -->
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+		<!-- Bootstrap 3.3.6 -->
+		<link rel="stylesheet" href="./libs/css/bootstrap.min.css">
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="./libs/css/font-awesome.min.css">
+		<!-- Ionicons -->
+		<link rel="stylesheet" href="./libs/css/ionicons.min.css">
+		<link rel="stylesheet" href="./libs/css/skins/_all-skins.min.css">
+		<link rel="stylesheet" href="./plugins/terebentina-sco/css/sco.message.css">
+		<link rel="stylesheet" href="./plugins/kindeditor/default.css">
+		<link rel="stylesheet" href="./css/styles.css">
+		<link rel="stylesheet" href="./plugins/bootstrap-table/bootstrap-table.css">
+		<!-- daterange picker -->
+		<link rel="stylesheet" href="./plugins/daterangepicker/daterangepicker.css">
+		<link rel="stylesheet" href="./plugins/viewer/viewer.min.css">
+		<script type="text/javascript" src="plugins/kindeditor/kindeditor-min.js"></script>
+		<script type="text/javascript" src="plugins/kindeditor/zh_CN.js"></script>
+	</head>
+
+	<body class="hold-transition skin-blue sidebar-mini">
+		<script data-main="./main.js" src="./libs/js/require.js" id="main" data-moudle="index"></script>
+		<div class="wrapper">
+			<div id='_header' style='min-height: 50px;'></div>
+			<!-- Left side column. contains the logo and sidebar -->
+			<div id="_menu"></div>
+			<!-- Content Wrapper. Contains page content -->
+			<div class="content-wrapper" style="min-height: 1000px;"></div>
+			<!-- /.content-wrapper -->
+			<div id="_footer"></div>
+			<!-- Control Sidebar -->
+		</div>
+		
+		<div class="pop" id="investmentBox">
+			<div class="flexBox">
+				<div class="box-content">
+					<div class="box-title"><span id="investLabel">新增</span>
+						<span class="box-close">x</span></div>
+					<div class="box-cc">
+						<form class="form-horizontal" role="form">
+							<div class="form-group">
+								<label for="investmentTitle" class="col-sm-1 control-label">标题</label>
+								<div class="col-sm-8">
+									<input type="text" class="form-control" id="investmentTitle" placeholder="">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="investmentContent" class="col-sm-1 control-label">内容</label>
+								<div class="col-sm-8" id="textarea">
+									<textarea name="content" id="investmentContent" style="width:500px;height:380px;visibility:hidden;"></textarea>
+								</div>
+							</div>
+						</form>
+					
+					</div>
+					<div class="box-foot">
+						<div class="row">
+							<div class="col-md-6"></div>
+							<div class="col-md-2">
+								<button type="button" class="btn btn-danger" id="boxCancel">取消</button>
+							</div>
+							<div class="col-md-2">
+								<button type="button" class="btn btn-success" id="boxSubmit">提交</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="pop"  id="confirmDelBox">
+			<div class="flexBox">
+				<div style="width: 300px;height: 150px;background-color: #FFF; border: 1px solid #ddd;">
+					<div style="font-size: 20px;margin:30px 0;width: 100%;text-align: center;">是否确认删除？</div>
+					<div class="row">
+						<div class="col-md-2"></div>
+						<div class="col-md-2">
+							<button type="button" class="btn btn-danger" id="cancelDel">取消</button>
+						</div>
+						<div class="col-md-3"></div>
+						<div class="col-md-2">
+							<button type="button" class="btn btn-success" id="confirmDel">确认</button>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	
+	
+	
+	
+	</body>
+
+</html>
+<div class="modal fade bs-example-modal-lg" id="modal"></div>
+
+<script>
+	var editor;
+	KindEditor.ready(function(K) {
+		editor = K.create('textarea[name="content"]', {
+			resizeType: 1,
+			allowPreviewEmoticons: false,
+			allowImageUpload: true,
+			items: [
+				'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+				'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+				'insertunorderedlist', '|', 'image', 'link'
+			],
+			uploadJson : '/qhtcj/investment/upload'
+		});
+		
+	});
+</script>
+
+<!-- /.modal -->

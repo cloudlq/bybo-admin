@@ -1,0 +1,90 @@
+{
+    "*": {
+        "controller": "app/js/doctor",
+        "template": "app/pages/table_view.html"
+    },
+    "doctor": {
+        "controller": "app/js/doctor",
+        "template": "app/pages/table_view.html"
+    },
+    "department": {
+        "controller": "app/js/department",
+        "template": "app/pages/table_view.html"
+    },
+    "rollpic": {
+        "controller": "app/js/rollpic",
+        "template": "app/pages/table_view.html"
+    },
+    "article/:type": {
+        "controller": "app/js/article",
+        "template": "app/pages/table_view.html"
+    },
+    "classify": {
+        "controller": "app/js/classify",
+        "template": "app/pages/table_view.html"
+    },
+    "expert": {
+        "controller": "app/js/expert",
+        "template": "app/pages/table_view.html"
+    },
+    "article_opt/:type/:id": {
+        "controller": "app/js/article_opt",
+        "template": "app/pages/article_opt.html"
+    },
+    "region": {
+        "controller": "app/js/region",
+        "template": "app/pages/table_view.html"
+    },
+    "store": {
+        "controller": "app/js/store",
+        "template": "app/pages/table_view.html"
+    },
+    "party": {
+        "controller": "app/js/party",
+        "template": "app/pages/table_view.html"
+    },
+    "adminStore": {
+        "controller": "app/js/adminStore",
+        "template": "app/pages/table_view.html"
+    },
+    "rollpicAll": {
+        "controller": "app/js/rollpicAll",
+        "template": "app/pages/table_view.html"
+    },
+    "changePwd": {
+        "controller": "app/js/changePwd",
+        "template": "app/pages/changePwd.html"
+    },
+    "knowledge": {
+        "controller": "app/js/knowledge",
+        "template": "app/pages/table_view.html"
+    },
+    "category": {
+        "controller": "app/js/category",
+        "template": "app/pages/table_view.html"
+    },
+    "caseCenter": {
+        "controller": "app/js/caseCenter",
+        "template": "app/pages/table_view.html"
+    },
+    "caseCenter_opt/:type/:id": {
+        "controller": "app/js/caseCenter_opt",
+        "template": "app/pages/caseCenter_opt.html"
+    },
+    "knowledge_opt/:id": {
+        "controller": "app/js/knowledge_opt",
+        "template": "app/pages/knowledge_opt.html"
+    },
+    "home": {
+        "controller": "app/js/home",
+        "template": "app/pages/home_opt.html"
+    },
+    "user": {
+        "controller": "app/js/user",
+        "template": "app/pages/table_view.html"
+    },
+    "greenChanne": {
+        "controller": "app/js/greenChanne",
+        "template": "app/pages/table_view.html"
+    }
+}
