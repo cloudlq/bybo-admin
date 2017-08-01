@@ -87,7 +87,8 @@ define(['moment', 'fun', 'ajaxfileupload', 'ckeditor'], function() {
 				$("#imgPath").attr("src", resp.imageUrl);
 				$("#author").val(resp.author);
 				$("#language").val(resp.language);
-
+				$("#keywords").val(resp.keywords);
+				$("#description").val(resp.description);
 				setTimeout(function(){
 //					var body =	$("iframe").contents().find("body");
 //					body.html(resp.content);
@@ -176,6 +177,8 @@ define(['moment', 'fun', 'ajaxfileupload', 'ckeditor'], function() {
 				var author = $("#author").val();
 				var content = editor.getData();
 				var language = $("#language").val();
+				var keywords = $("#keywords").val();
+				var description = $("#description").val();
 				if(_FUN.isNull(title)) {
 					$.scojs_message("标题不能为空", $.scojs_message.TYPE_ERROR);
 					return;
@@ -188,7 +191,9 @@ define(['moment', 'fun', 'ajaxfileupload', 'ckeditor'], function() {
 					language: language,
 					author: author,
 					content: content,
-					categoryId: DATA.type
+					categoryId: DATA.type,
+					keywords:keywords,
+					description:description
 				};
 
 				if(DATA.optType == '0') {

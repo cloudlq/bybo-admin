@@ -105,7 +105,7 @@ define(['moment', 'text!../tpl/article_view.html', 'text!../pages/caseCenter_opt
 
 		FUN.INIT = function() {
 			FUN.INIT_TITLE();
-//			FUN.EDITOR();
+			FUN.EDITOR();
 			EVENT.INIT();
 			if(DATA.editId == "ADD") {
 				DATA.optType = "0";
@@ -124,9 +124,12 @@ define(['moment', 'text!../tpl/article_view.html', 'text!../pages/caseCenter_opt
 				$("#author").val(resp.author);
 				$("#language").val(resp.language);
 				$("#imgPath2").attr("src", resp.imageUrl2);
-//				setTimeout(function(){
-//					editor.setData(resp.content);
-//				},500)
+				
+				$("#keywords").val(resp.keywords);
+				$("#description").val(resp.description);
+					setTimeout(function(){
+					editor.setData(resp.content);
+				},500)
 				
 				FUN.REND_DEPART_EDIT(resp.department);
 			});
@@ -185,10 +188,13 @@ define(['moment', 'text!../tpl/article_view.html', 'text!../pages/caseCenter_opt
 				var imageUrl = $("#imgPath").attr("src");
 				var title = $("#title").val();
 				var author = $("#author").val();
-//				var content = editor.getData();
+				var content = editor.getData();
 				var language = $("#language").val();
 				var department = $("#departmentList").val();
 				var imageUrl2 =  $("#imgPath2").attr("src");
+				
+				var keywords = $("#keywords").val();
+				var description = $("#description").val();
 				if(_FUN.isNull(title)) {
 					$.scojs_message("标题不能为空", $.scojs_message.TYPE_ERROR);
 					return;
@@ -200,10 +206,12 @@ define(['moment', 'text!../tpl/article_view.html', 'text!../pages/caseCenter_opt
 					imageUrl: imageUrl,
 					language: language,
 					author: author,
-//					content: content,
+					content: content,
 					categoryId: DATA.type,
 					imageUrl2:imageUrl2,
-					department:department
+					department:department,
+					keywords:keywords,
+					description:description
 				};
 
 				if(DATA.optType == '0') {

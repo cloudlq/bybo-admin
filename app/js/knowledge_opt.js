@@ -205,6 +205,8 @@ define(['moment', 'text!../tpl/knowledge_view.html', 'text!../tpl/knowledge_opt.
 				
 				$('#language').val(resp.language);
 				$("#title").val(resp.title);
+				$("#keywords").val(resp.keywords);
+				$("#description").val(resp.description);
 				setTimeout(function(){
 					editor.setData(resp.content);
 				},500)
@@ -318,6 +320,9 @@ define(['moment', 'text!../tpl/knowledge_view.html', 'text!../tpl/knowledge_opt.
 					similarIds.push(value);
 				}); 
 				
+				var keywords = $("#keywords").val();
+				var description = $("#description").val();
+				
 				var req = {
 					title: title,
 					language: language,
@@ -327,7 +332,9 @@ define(['moment', 'text!../tpl/knowledge_view.html', 'text!../tpl/knowledge_opt.
 					departmentName: departmentName,
 					categoryIds: categoryIds,
 					categoryNames: categoryNames,
-					similarIds:similarIds
+					similarIds:similarIds,
+					keywords:keywords,
+					description:description
 				};
 
 				if(DATA.optType == '0') {

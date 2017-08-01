@@ -317,6 +317,9 @@ define(['moment', 'text!../tpl/expert_view.html', 'text!../tpl/expert_opt.html',
 					$("#content").val(resp.content);
 					$('#language').val(resp.language);
 					$("#duty").val(resp.duty);
+					
+					$("#keywords").val(resp.keywords);
+					$("#description").val(resp.description);
 					$("#imgPath").attr("src", resp.photo);
 					$("#imgPath2").attr("src", resp.grayPhone);
 					FUN.REND_DEPART_EDIT(resp.language,resp.departmentIds);
@@ -351,6 +354,8 @@ define(['moment', 'text!../tpl/expert_view.html', 'text!../tpl/expert_opt.html',
 				var content = $("#content").val();
 				var language = $('#language').val();
 				var duty = $("#duty").val();
+				var keywords = $("#keywords").val();
+				var description = $("#description").val();
 				var checkList = $("input[name=department]:checked");
 				var department = "";
 				var ids = [];
@@ -386,7 +391,9 @@ define(['moment', 'text!../tpl/expert_view.html', 'text!../tpl/expert_opt.html',
 					department: department,
 					departmentIds: ids,
 					grayPhone:grayPhone,
-					duty:duty
+					duty:duty,
+					keywords:keywords,
+					description:description
 				};
 
 				if(DATA.optType == '0') {

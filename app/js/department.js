@@ -257,6 +257,8 @@ define(['moment', 'text!../tpl/department_view.html', 'text!../tpl/department_op
 					$("#technical").val(resp.technical);
 					$("#imgPath1").attr("src", resp.icon);
 					$("#imgPath2").attr("src", resp.icon2);
+					$("#keywords").val(resp.keywords);
+					$("#description").val(resp.description);
 				});
 			});
 
@@ -283,7 +285,10 @@ define(['moment', 'text!../tpl/department_view.html', 'text!../tpl/department_op
 				var picture = $("#imgPath").attr("src");
 				var technical = $("#technical").val();
 				var service = $("#service").val();
-				var language = $('#language').val()
+				var language = $('#language').val();
+				var keywords = $("#keywords").val();
+				var description = $("#description").val();
+				
 				var url = $("#url").val();
 				var icon =  $("#imgPath1").attr("src");
 				var icon2 =  $("#imgPath2").attr("src");
@@ -305,7 +310,9 @@ define(['moment', 'text!../tpl/department_view.html', 'text!../tpl/department_op
 					technical:technical,
 					service: service,
 					icon:icon,
-					icon2:icon2
+					icon2:icon2,
+					keywords:keywords,
+					description:description
 				};
 
 				if(DATA.optType == '0') {

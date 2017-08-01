@@ -234,7 +234,9 @@ define(['moment', 'text!../tpl/knowledge_view.html', 'text!../tpl/knowledge_opt.
 		FUN.QUERPARAMS = function(params) {
 			if(!_FUN.isNull(DATA.c)){
 				$("#language").val(DATA.c.language);
-				$("#title").val(DATA.c.title);
+				if(!_FUN.isNull(DATA.c.title)){
+					$("#title").val(DATA.c.title);
+				}
 			}
 			DATA.page = params.pageNumber;
 			var temp = {

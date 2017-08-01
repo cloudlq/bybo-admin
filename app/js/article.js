@@ -324,7 +324,9 @@ define(['moment', 'text!../tpl/article_view.html', 'text!../tpl/article_opt.html
 				var picture = $("#imgPath").attr("src");
 				var technical = $("#technical").val();
 				var service = $("#service").val();
-				var language = $('#language').val()
+				var language = $('#language').val();
+				var keywords = $("#keywords").val();
+				var description = $("#description").val();
 				var url = $("#url").val();
 				if(_FUN.isNull(name)) {
 					$.scojs_message("名称不能为空", $.scojs_message.TYPE_ERROR);
@@ -342,7 +344,9 @@ define(['moment', 'text!../tpl/article_view.html', 'text!../tpl/article_opt.html
 					picture: picture,
 					language: language,
 					technical: technical,
-					service: service
+					service: service,
+					keywords:keywords,
+					description:description
 				};
 
 				if(DATA.optType == '0') {
